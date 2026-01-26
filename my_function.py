@@ -357,7 +357,7 @@ def afficher_comparaison_finale(liste_chemins_rgb, chemin_carte):
     layers = []
     for p in liste_chemins_rgb:
         ds = gdal.Open(p)
-        bande = ds.GetRasterBand(1).ReadAsArray().astype(np.float32)
+        bande = ds.GetRasterBand(8).ReadAsArray().astype(np.float32)
         bande[bande <= 0] = np.nan 
         layers.append(bande)
     
