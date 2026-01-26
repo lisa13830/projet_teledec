@@ -392,4 +392,7 @@ def afficher_comparaison_finale(liste_chemins_rgb, chemin_carte):
     cbar.ax.set_yticklabels(['Sol Nu', 'Herbe', 'Landes', 'Arbre'])
     
     plt.tight_layout()
+
+    plt.savefig('../results/figure/comparaison_sentinel_vs_classification.png', dpi=300, bbox_inches='tight')
+    
     plt.show()
